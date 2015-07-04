@@ -20,3 +20,4 @@ all:
 	# Finally, copy bashrc and bash_profile to the right location
 	cp .bashrc $$HOME
 	cp .bash_profile $$HOME
+	source $$HOME/.bash_profile
