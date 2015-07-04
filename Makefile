@@ -24,3 +24,5 @@ all:
 	# Finally, copy bashrc and bash_profile to the right location
 	cp .bashrc $$HOME
 	cp .bash_profile $$HOME
+	# Add +x to scripts
+	for i in $$HOME/scripts/*; do chmod +x $i; done
