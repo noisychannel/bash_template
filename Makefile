@@ -1,4 +1,5 @@
 all:
+	CWD=$$PWD
 	mkdir -p $$HOME/scripts
 	cd $$HOME/scripts
 	# qwatch
@@ -12,3 +13,7 @@ all:
 	tar xvzf colordiff-1.0.15.tar.gz
 	cp colordiff-1.0.15/colordiff.pl colordiff
 	rm -rf colordiff-1.0.15 colordiff-1.0.15.tar.gz
+	# Finally, copy bashrc and bash_profile to the right location
+	cd ${CWD}
+	cp .bashrc $$HOME
+	cp .bash_profile $$HOME
