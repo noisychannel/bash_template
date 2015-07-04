@@ -17,7 +17,10 @@ all:
 	tar xvzf colordiff-1.0.15.tar.gz
 	cp colordiff-1.0.15/colordiff.pl colordiff
 	rm -rf colordiff-1.0.15 colordiff-1.0.15.tar.gz
+	# Dircolors config
+	git clone https://gist.github.com/3811eccb19c742a7a845.git
+	cp 3811eccb19c742a7a845/.dircolors $$HOME
+	rm -rf 3811eccb19c742a7a845
 	# Finally, copy bashrc and bash_profile to the right location
 	cp .bashrc $$HOME
 	cp .bash_profile $$HOME
-	source $$HOME/.bash_profile
